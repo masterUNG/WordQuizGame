@@ -26,6 +26,7 @@
         <Button
             android:layout_width="@dimen/button1"
             android:layout_height="wrap_content"
+            android:onClick="clickGame1"
             android:text="@string/game1"
             android:id="@+id/button"
             android:layout_gravity="center_horizontal"
@@ -34,6 +35,7 @@
         <Button
             android:layout_width="@dimen/button1"
             android:layout_height="wrap_content"
+            android:onClick="clickGame2"
             android:text="@string/game2"
             android:id="@+id/button2"
             android:layout_gravity="center_horizontal"
@@ -42,6 +44,7 @@
         <Button
             android:layout_width="@dimen/button1"
             android:layout_height="wrap_content"
+            android:onClick="clickGame3"
             android:text="@string/game3"
             android:id="@+id/button3"
             android:layout_gravity="center_horizontal"
