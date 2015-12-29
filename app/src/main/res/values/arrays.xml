@@ -1,0 +1,38 @@
+<resources>
+    <string-array name="difficulty">
+        <item>@string/easy_label</item>
+        <item>@string/medium_label</item>
+        <item>@string/hard_label</item>
+    </string-array>
+
+    <!-- อาร์เรย์ที่ใช้กับตัวเลือกรูปแบบพยัญชนะ -->
+    <string-array name="charCaseText">
+        <item>ตัวพิมพ์ใหญ่</item>
+        <item>ตัวพิมพ์เล็ก</item>
+        <item>ตัวพิมพ์ใหญ่และเล็ก (สุ่มแต่ละข้อ)</item>
+    </string-array>
+
+    <string-array name="charCaseValue">
+        <item>@string/upper_case_value</item>
+        <item>@string/lower_case_value</item>
+        <item>@string/random_case_value</item>
+    </string-array>
+
+    <!-- อาร์เรย์ที่ใช้กับตัวเลือกหมวดคำศัพท์ -->
+    <string-array name="categoriesText">
+        <item>สัตว์</item>
+        <item>สิ่งของ</item>
+        <item>ส่วนต่างๆของร่างกาย</item>
+        <item>สี</item>
+        <item>ตัวเลข</item>
+    </string-array>
+
+    <string-array name="categoriesValue">
+        <item>animals</item>
+        <item>objects</item>
+        <item>body</item>
+        <item>colors</item>
+        <item>numbers</item>
+    </string-array>
+
+</resources>

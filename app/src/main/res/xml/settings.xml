@@ -1,0 +1,23 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="prefScreen">
+
+    <!-- ตัวเลือกรูปแบบพยัญชนะ -->
+    <ListPreference
+        android:defaultValue="@string/upper_case_value"
+        android:entries="@array/charCaseText"
+        android:entryValues="@array/charCaseValue"
+        android:key="@string/char_case_key"
+        android:summary="@string/char_case_summary"
+        android:title="@string/char_case_title"/>
+
+    <!-- ตัวเลือกหมวดคำศัพท์ -->
+    <MultiSelectListPreference
+        android:defaultValue="@array/categoriesValue"
+        android:entries="@array/categoriesText"
+        android:entryValues="@array/categoriesValue"
+        android:key="@string/categories_key"
+        android:summary="@string/categories_summary"
+        android:title="@string/categories_title"/>
+
+</PreferenceScreen>

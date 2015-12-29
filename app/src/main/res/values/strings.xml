@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Word Quiz Game</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="title_activity_high_score">คะแนนสูงสุด</string>
+    <string name="action_settings">ตัวเลือก</string>
+
+    <!-- ข้อความในหน้าหลัก -->
+    <string name="app_title">เกมทายคำศัพท์\nภาษาอังกฤษ</string>
+    <string name="app_title_land">เกมทายคำศัพท์ภาษาอังกฤษ</string>
+    <string name="play_game_label">เล่นเกม</string>
+    <string name="high_score_label">คะแนนสูงสุด</string>
+    <string name="settings_label">ตั้งค่า</string>
+
+    <!-- ข้อความในไดอะล็อกที่ให้เลือกระดับความยากของเกม -->
+    <string name="choose_difficulty_title">เลือกระดับความยาก</string>
+    <string name="easy_label">ง่าย (2 ตัวเลือก)</string>
+    <string name="medium_label">ปานกลาง (4 ตัวเลือก)</string>
+    <string name="hard_label">ยาก (6 ตัวเลือก)</string>
+
+    <!-- ค่าสตริงที่สัมพันธ์กับตัวเลือกรูปแบบพยัญชนะแต่ละตัวเลือก ซึ่งจะถูกเรียกใช้ในไฟล์ arrays.xml
+         รวมถึงในโค้ดจาวา (สาเหตุที่มากำหนดตรงนี้ ก็เพื่อเวลาเรียกใช้ในไฟล์ arrays.xml และใน
+         โค้ดจาวาจะได้ตรงกัน และหากต้องการแก้ไขค่าก็สามารถแก้ตรงนี้เพียงจุดเดียว) -->
+    <string name="upper_case_value">upper</string>
+    <string name="lower_case_value">lower</string>
+    <string name="random_case_value">random</string>
+
+    <!-- ข้อความในหน้าเกม -->
+    <string name="question_head_label">คำถาม %1$d จาก %2$d</string>
+    <string name="guess_label">เลือกคำศัพท์ของภาพข้างบน</string>
+    <string name="incorrect_answer">ยังไม่ถูก ลองใหม่นะครับ</string>
+    <string name="correct_answer">เก่งมากครับ!</string>
+    <string name="image_description">รูปภาพคำถาม</string>
+
+    <!-- ข้อความในหน้า Settings -->
+    <string name="char_case_title">รูปแบบพยัญชนะของคำศัพท์</string>
+    <string name="char_case_summary">กำหนดให้แสดงคำศัพท์ด้วยตัวพิมพ์ใหญ่หรือตัวพิมพ์เล็ก</string>
+    <string name="char_case_key">charCasePref</string>
+
+    <string name="categories_title">หมวดคำศัพท์</string>
+    <string name="categories_summary">เลือกหมวดคำศัพท์ที่ต้องการ</string>
+    <string name="categories_key">categoriesPref</string>
+
+    <!-- ข้อความในไดอะล็อกที่สรุปผลหลังจากจบข้อ 10 -->
+    <string name="result_title">สรุปผล</string>
+    <string name="num_guesses">จำนวนครั้งที่ตอบ : </string>
+    <string name="success_percentage">เปอร์เซ็นต์ความถูกต้อง : </string>
+    <string name="restart_quiz">เริ่มเกมใหม่</string>
+    <string name="return_main">กลับเมนูหลัก</string>
+
+    <!-- ข้อความในไดอะล็อกที่บอกให้เลือกหมวดคำศัพท์อย่างน้อย 1 หมวด -->
+    <string name="more_categories_title">กรุณาเลือกหมวดคำศัพท์</string>
+    <string name="more_categories_message">คุณต้องเลือกหมวดคำศัพท์อย่างน้อย 1 หมวด</string>
+    <string name="ok">OK</string>
+    <string name="open_settings">เข้าสู่หน้าการตั้งค่า</string>
+    <string name="title_activity_game1">Game1</string>
+
+    <string name="hello_world">Hello world!</string>
+</resources>

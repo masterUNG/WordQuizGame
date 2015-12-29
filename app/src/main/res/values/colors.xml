@@ -1,0 +1,12 @@
+<resources>
+    <!-- สีข้อความที่เป็น Title (ฟ้า) -->
+    <color name="title_color">#ffff0d8a</color>
+    <!-- สีพื้นหลังของหน้าหลักและหน้าเกม (เหลืองอ่อน) -->
+    <color name="background_color">#FFFFCC</color>
+    <!-- สีข้อความธรรมดา (ดำ) -->
+    <color name="text_color">#000000</color>
+    <!-- สีข้อความที่บอกว่าตอบถูก (เขียว) -->
+    <color name="correct_answer">#00CC00</color>
+    <!-- สีข้อความที่บอกว่าตอบผิด (แดง) -->
+    <color name="incorrect_answer">#FF0000</color>
+</resources>
