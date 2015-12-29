@@ -19,15 +19,16 @@
         <activity
             android:name=".GameActivity"
             android:label="@string/title_activity_game"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".SettingsActivity"
-            android:label=""></activity>
+            android:label="" />
         <activity
             android:name=".HighScoreActivity"
             android:label="@string/title_activity_high_score"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
-        <activity android:name=".MainActivity"></activity>
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ShowGameActivity"></activity>
     </application>
 
 </manifest>

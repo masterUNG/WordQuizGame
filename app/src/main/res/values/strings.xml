@@ -55,4 +55,13 @@
     <string name="title_activity_game1">Game1</string>
 
     <string name="hello_world">Hello world!</string>
+
+
+    <string name="choose_game">เลือกเกมร์ ที่ต้องการ</string>
+    <string name="game1">เกมร์ทายคำศัพย์ จากรูปภาพ</string>
+    <string name="game2">เกมร์สกดคำศัพย์ ตามรูปภาพ</string>
+    <string name="game3">เกมร์จับคู่คำศัพย์ รูปภาพ</string>
+
+
+
 </resources>
