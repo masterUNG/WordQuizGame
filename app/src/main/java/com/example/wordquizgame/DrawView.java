@@ -15,11 +15,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class DrawView extends View {
 
     //กำรหนดรูปที่ต้องการจะ ย้าย
-    public int[] object = new int[]{R.drawable.animals_cat
-            , R.drawable.animals_dog, R.drawable.animals_dolphin};
+    public int[] object = new int[3];
 
     //กำหนดรูปที่ต้องการจะไป ทาบ
     public int[] target = new int[]{R.drawable.cat
@@ -78,7 +79,8 @@ public class DrawView extends View {
         targetSourceInts[10] = R.drawable.nose;
         targetSourceInts[11] = R.drawable.thumb;
 
-
+        //Random for Image
+        randomForImage();
 
 
         screen_width = display.getWidth();
@@ -103,6 +105,73 @@ public class DrawView extends View {
         object_position = new int[][]{{object_default_position[0][0], object_default_position[0][1]}
                 , {object_default_position[1][0], object_default_position[1][1]}
                 , {object_default_position[2][0], object_default_position[2][1]}};
+    }
+
+    private void randomForImage() {
+
+        int intMyRandom;
+        Random objRandom = new Random();
+
+        for (int i = 0; i < 3; i++) {
+
+            //for Object & Target
+            intMyRandom = objRandom.nextInt(12) + 1;
+            object[i] = chooseImage(intMyRandom);
+
+
+        }   //for
+
+    }   // randomForImage
+
+    private int chooseImage(int intMyRandom) {
+
+        int intImage = R.drawable.animals_dog;
+
+        switch (intMyRandom) {
+
+            case 1:
+                intImage = R.drawable.animals_cat;
+                break;
+            case 2:
+                intImage = R.drawable.animals_dog;
+                break;
+            case 3:
+                intImage = R.drawable.animals_dolphin;
+                break;
+            case 4:
+                intImage = R.drawable.body_arm;
+                break;
+            case 5:
+                intImage = R.drawable.body_ear;
+                break;
+            case 6:
+                intImage = R.drawable.body_eye;
+                break;
+            case 7:
+                intImage = R.drawable.body_foot;
+                break;
+            case 8:
+                intImage = R.drawable.body_hair;
+                break;
+            case 9:
+                intImage = R.drawable.body_hand;
+                break;
+            case 10:
+                intImage = R.drawable.body_mouth;
+                break;
+            case 11:
+                intImage = R.drawable.body_nose;
+                break;
+            case 12:
+                intImage = R.drawable.body_thumb;
+                break;
+
+            default:
+                intImage = R.drawable.animals_cat;
+                break;
+        }   // switch
+
+        return intImage;
     }
 
     protected void onDraw(Canvas canvas) {
