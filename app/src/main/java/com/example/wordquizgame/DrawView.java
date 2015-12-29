@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 public class DrawView extends View {
 
+    //กำรหนดรูปที่ต้องการจะ ย้าย
     public int[] object = new int[] { R.drawable.animals_cat
             , R.drawable.animals_dog, R.drawable.animals_dolphin };
     public int[] target = new int[] { R.drawable.animals_cat
