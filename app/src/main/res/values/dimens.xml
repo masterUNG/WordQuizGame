@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="button1">320dp</dimen>
-    <dimen name="h1">30sp</dimen>
+    <dimen name="h1">28sp</dimen>
     <dimen name="h2">25sp</dimen>
 
 </resources>

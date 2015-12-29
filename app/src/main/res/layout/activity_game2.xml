@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#FFFFFF"
+    android:background="@color/background_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,9 +8,8 @@
         android:id="@+id/scene"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical" >
+
+        android:orientation="vertical">
 
     </LinearLayout>
 
@@ -22,5 +21,29 @@
         android:layout_margin="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/linTop"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game2"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/h1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/textView3"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="@dimen/h1" />
+    </LinearLayout>
 
 </RelativeLayout>
