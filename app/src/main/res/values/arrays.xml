@@ -35,4 +35,13 @@
         <item>numbers</item>
     </string-array>
 
+    <string-array name="my_game">
+
+        <item>Game1</item>
+        <item>Game2</item>
+        <item>Game3</item>
+
+    </string-array>
+
+
 </resources>
