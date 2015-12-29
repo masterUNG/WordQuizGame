@@ -42,9 +42,44 @@ public class DrawView extends View {
     int object_id = -1;
     Context mContext;
 
+    private int[] objectSourceInts, targetSourceInts;
+
+
     public DrawView(Context context, Display display) {
         super(context);
         mContext = context;
+
+        //Assign Source of Image
+        objectSourceInts = new int[12];
+        objectSourceInts[0] = R.drawable.animals_cat;
+        objectSourceInts[1] = R.drawable.animals_dog;
+        objectSourceInts[2] = R.drawable.animals_dolphin;
+        objectSourceInts[3] = R.drawable.body_arm;
+        objectSourceInts[4] = R.drawable.body_ear;
+        objectSourceInts[5] = R.drawable.body_eye;
+        objectSourceInts[6] = R.drawable.body_foot;
+        objectSourceInts[7] = R.drawable.body_hair;
+        objectSourceInts[8] = R.drawable.body_hand;
+        objectSourceInts[9] = R.drawable.body_mouth;
+        objectSourceInts[10] = R.drawable.body_nose;
+        objectSourceInts[11] = R.drawable.body_thumb;
+
+        targetSourceInts = new int[12];
+        targetSourceInts[0] = R.drawable.cat;
+        targetSourceInts[1] = R.drawable.dog;
+        targetSourceInts[2] = R.drawable.dolphin;
+        targetSourceInts[3] = R.drawable.arm;
+        targetSourceInts[4] = R.drawable.ear;
+        targetSourceInts[5] = R.drawable.eye;
+        targetSourceInts[6] = R.drawable.foot;
+        targetSourceInts[7] = R.drawable.hair;
+        targetSourceInts[8] = R.drawable.hand;
+        targetSourceInts[9] = R.drawable.mouth;
+        targetSourceInts[10] = R.drawable.nose;
+        targetSourceInts[11] = R.drawable.thumb;
+
+
+
 
         screen_width = display.getWidth();
         screen_height = display.getHeight();
