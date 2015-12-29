@@ -28,7 +28,8 @@
             android:label="@string/title_activity_high_score"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ShowGameActivity"></activity>
+        <activity android:name=".ShowGameActivity" />
+        <activity android:name=".Game2Activity"></activity>
     </application>
 
 </manifest>
