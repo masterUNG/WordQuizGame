@@ -94,9 +94,9 @@ public class DrawView extends View {
             onTarget[i] = false;
         }
 
-        target_position = new int[][]{{screen_width * 6 / 8, screen_height * 2 / 8}
+        target_position = new int[][]{{screen_width * 6 / 8, screen_height * 6 / 8}
                 , {screen_width * 6 / 8, screen_height * 4 / 8}
-                , {screen_width * 6 / 8, screen_height * 6 / 8}};
+                , {screen_width * 6 / 8, screen_height * 2 / 8}};
 
         object_default_position = new int[][]{{screen_width * 2 / 8, screen_height * 2 / 8}
                 , {screen_width * 2 / 8, screen_height * 4 / 8}
