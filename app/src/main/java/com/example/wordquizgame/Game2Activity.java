@@ -35,16 +35,16 @@ public class Game2Activity extends Activity {
             public void onClick(View v) {
               //  dv.reset();
 
-                restartActvity();
+               restartActvity();
+
 
 
             }   // event
         });
 
-
-
-
     }   // Main Method
+
+
 
     private void restartActvity() {
 

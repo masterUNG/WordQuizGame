@@ -279,6 +279,8 @@ public class DrawView extends View {
 
                         reRunGame();
 
+                        sentTimes(timesAnInt);
+
                     }   // if
 
 
@@ -295,6 +297,12 @@ public class DrawView extends View {
 
         return true;
     }
+
+    private void sentTimes(int timesAnInt) {
+
+
+
+    }   // sentTimes
 
     private void reRunGame() {
 
