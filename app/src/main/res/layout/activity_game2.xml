@@ -36,14 +36,6 @@
             android:layout_gravity="center_horizontal"
             android:textSize="@dimen/h1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:id="@+id/txtTimes"
-            android:layout_gravity="center_horizontal"
-            android:textStyle="bold"
-            android:textSize="@dimen/h1" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
@@ -276,6 +277,8 @@ public class DrawView extends View {
 
                         Toast.makeText(mContext, "ครั้งที่ " + Integer.toString(timesAnInt), Toast.LENGTH_SHORT).show();
 
+                        reRunGame();
+
                     }   // if
 
 
@@ -292,6 +295,19 @@ public class DrawView extends View {
 
         return true;
     }
+
+    private void reRunGame() {
+
+        Handler objHandler = new Handler();
+        objHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                reset();
+            }
+        }, 3000);
+
+
+    }   // reRunGame
 
 
     public void reset() {
