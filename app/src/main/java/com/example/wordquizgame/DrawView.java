@@ -47,7 +47,6 @@ public class DrawView extends View {
     private int timesAnInt = 1;
 
 
-
     public DrawView(Context context, Display display) {
         super(context);
         mContext = context;
@@ -118,7 +117,7 @@ public class DrawView extends View {
 
         Random objRandom = new Random();
 
-        for (int i=0;i<3;i++) {
+        for (int i = 0; i < 3; i++) {
 
             int intIndex = objRandom.nextInt(intNumber.length); // สุ่ม 1-12
 
@@ -136,7 +135,7 @@ public class DrawView extends View {
 
         }   // for
 
-}   // randomForImage
+    }   // randomForImage
 
 
     private int chooseImage(boolean status, int intMyRandom) {
@@ -286,7 +285,6 @@ public class DrawView extends View {
                 }   // if 1
 
 
-
                 break;
         }
 
@@ -294,7 +292,6 @@ public class DrawView extends View {
 
         return true;
     }
-
 
 
     public void reset() {
