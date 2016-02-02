@@ -29,7 +29,8 @@
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ShowGameActivity" />
-        <activity android:name=".Game2Activity"></activity>
+        <activity android:name=".Game2Activity" />
+        <activity android:name=".Game3Activity"></activity>
     </application>
 
 </manifest>
