@@ -35,9 +35,7 @@ public class Game2Activity extends Activity {
             public void onClick(View v) {
               //  dv.reset();
 
-                Intent objIntent = new Intent(Game2Activity.this, Game2Activity.class);
-                objIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(objIntent);
+                restartActvity();
 
 
             }   // event
@@ -48,8 +46,13 @@ public class Game2Activity extends Activity {
 
     }   // Main Method
 
+    private void restartActvity() {
 
+        Intent objIntent = new Intent(Game2Activity.this, Game2Activity.class);
+        objIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(objIntent);
 
+    }
 
 
     public void draw() {
