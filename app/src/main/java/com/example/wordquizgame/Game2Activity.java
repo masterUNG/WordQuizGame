@@ -1,6 +1,7 @@
 package com.example.wordquizgame;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,8 +33,14 @@ public class Game2Activity extends Activity {
         Button buttonReset = (Button)findViewById(R.id.buttonReset);
         buttonReset.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                dv.reset();
-            }
+              //  dv.reset();
+
+                Intent objIntent = new Intent(Game2Activity.this, Game2Activity.class);
+                objIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(objIntent);
+
+
+            }   // event
         });
 
 

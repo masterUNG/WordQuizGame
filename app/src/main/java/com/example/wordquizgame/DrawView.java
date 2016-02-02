@@ -303,11 +303,14 @@ public class DrawView extends View {
             @Override
             public void run() {
                 reset();
+
             }
         }, 3000);
 
 
     }   // reRunGame
+
+
 
 
     public void reset() {
@@ -317,6 +320,8 @@ public class DrawView extends View {
         object_position = new int[][]{{object_default_position[0][0], object_default_position[0][1]}
                 , {object_default_position[1][0], object_default_position[1][1]}
                 , {object_default_position[2][0], object_default_position[2][1]}};
+
+
 
         invalidate();
     }
