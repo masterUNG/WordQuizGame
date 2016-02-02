@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,8 +24,10 @@ public class DrawView extends View {
     public int[] object = new int[3];
 
     //กำหนดรูปที่ต้องการจะไป ทาบ
-    public int[] target = new int[]{R.drawable.cat
-            , R.drawable.dog, R.drawable.dolphin};
+//    public int[] target = new int[]{R.drawable.cat
+//            , R.drawable.dog, R.drawable.dolphin};
+
+    public int[] target = new int[3];
 
     //กำหนดขนาดของ Object
     public int object_size;
@@ -131,62 +134,83 @@ public class DrawView extends View {
             intMyArrayRandom[i] = intNumber[intIndex];
             intNumber[intIndex] = 0;
 
-            object[i] = chooseImage(intMyArrayRandom[i]);
+            object[i] = chooseImage(true, intMyArrayRandom[i]);
+            target[i] = chooseImage(false, intMyArrayRandom[i]);
 
         }   // for
 
 }   // randomForImage
 
 
-    private int chooseImage(int intMyRandom) {
+    private int chooseImage(boolean status, int intMyRandom) {
 
         int intImage = R.drawable.animals_dog;
+        int intTatget;
 
         switch (intMyRandom) {
 
             case 1:
                 intImage = R.drawable.animals_cat;
+                intTatget = R.drawable.cat;
                 break;
             case 2:
                 intImage = R.drawable.animals_dog;
+                intTatget = R.drawable.dog;
                 break;
             case 3:
                 intImage = R.drawable.animals_dolphin;
+                intTatget = R.drawable.dolphin;
                 break;
             case 4:
                 intImage = R.drawable.body_arm;
+                intTatget = R.drawable.arm;
                 break;
             case 5:
                 intImage = R.drawable.body_ear;
+                intTatget = R.drawable.ear;
                 break;
             case 6:
                 intImage = R.drawable.body_eye;
+                intTatget = R.drawable.eye;
                 break;
             case 7:
                 intImage = R.drawable.body_foot;
+                intTatget = R.drawable.foot;
                 break;
             case 8:
                 intImage = R.drawable.body_hair;
+                intTatget = R.drawable.hair;
                 break;
             case 9:
                 intImage = R.drawable.body_hand;
+                intTatget = R.drawable.hand;
                 break;
             case 10:
                 intImage = R.drawable.body_mouth;
+                intTatget = R.drawable.mouth;
                 break;
             case 11:
                 intImage = R.drawable.body_nose;
+                intTatget = R.drawable.nose;
                 break;
             case 12:
                 intImage = R.drawable.body_thumb;
+                intTatget = R.drawable.thumb;
                 break;
 
             default:
                 intImage = R.drawable.animals_cat;
+                intTatget = R.drawable.cat;
                 break;
         }   // switch
 
-        return intImage;
+        if (status) {
+            return intImage;
+        } else {
+            return intTatget;
+        }
+
+
     }
 
     protected void onDraw(Canvas canvas) {
@@ -233,22 +257,33 @@ public class DrawView extends View {
 
             case MotionEvent.ACTION_UP:
                 if (object_id != -1 && !onTarget[object_id]) {
+
                     if (Math.abs(object_position[object_id][0] - target_position[object_id][0]) < object_size / 2
                             && Math.abs(object_position[object_id][1] - target_position[object_id][1]) < object_size / 2) {
                         object_position[object_id][0] = target_position[object_id][0];
                         object_position[object_id][1] = target_position[object_id][1];
                         onTarget[object_id] = true;
-                    }
+
+                        Log.d("game", "You Win");
+
+                    }   // if 2
 
                     int count = 0;
                     for (int i = 0; i < object.length; i++) {
                         if (onTarget[i])
                             count++;
-                    }
+                    }   // for
 
                     if (count == object.length)
                         Toast.makeText(mContext, "Finish", Toast.LENGTH_SHORT).show();
-                }
+
+                    Log.d("game", "count ==> " + count);
+                    Log.d("game", "object.length ==> " + object.length);
+
+                }   // if 1
+
+
+
                 break;
         }
 
