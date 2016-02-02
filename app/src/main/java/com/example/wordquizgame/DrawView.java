@@ -24,9 +24,6 @@ public class DrawView extends View {
     public int[] object = new int[3];
 
     //กำหนดรูปที่ต้องการจะไป ทาบ
-//    public int[] target = new int[]{R.drawable.cat
-//            , R.drawable.dog, R.drawable.dolphin};
-
     public int[] target = new int[3];
 
     //กำหนดขนาดของ Object
@@ -47,7 +44,7 @@ public class DrawView extends View {
     Context mContext;
 
     private int[] objectSourceInts, targetSourceInts;
-
+    private int timesAnInt = 1;
 
 
 
@@ -274,8 +271,14 @@ public class DrawView extends View {
                             count++;
                     }   // for
 
-                    if (count == object.length)
-                        Toast.makeText(mContext, "Finish", Toast.LENGTH_SHORT).show();
+                    if (count == object.length) {
+
+                        timesAnInt += 1;
+
+                        Toast.makeText(mContext, "ครั้งที่ " + Integer.toString(timesAnInt), Toast.LENGTH_SHORT).show();
+
+                    }   // if
+
 
                     Log.d("game", "count ==> " + count);
                     Log.d("game", "object.length ==> " + object.length);
@@ -291,6 +294,8 @@ public class DrawView extends View {
 
         return true;
     }
+
+
 
     public void reset() {
         for (int i = 0; i < object.length; i++)

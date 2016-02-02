@@ -8,10 +8,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Game2Activity extends Activity {
     DrawView dv;
     LinearLayout scene;
+
+    private TextView timesTextView;
 
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -19,6 +22,8 @@ public class Game2Activity extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game2);
+
+
 
         scene = (LinearLayout)findViewById(R.id.scene);
         dv = new DrawView(Game2Activity.this, getWindowManager().getDefaultDisplay());
@@ -30,7 +35,15 @@ public class Game2Activity extends Activity {
                 dv.reset();
             }
         });
-    }
+
+
+
+
+    }   // Main Method
+
+
+
+
 
     public void draw() {
         try {
