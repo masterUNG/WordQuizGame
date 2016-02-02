@@ -46,6 +46,8 @@ public class DrawView extends View {
     private int[] objectSourceInts, targetSourceInts;
 
 
+
+
     public DrawView(Context context, Display display) {
         super(context);
         mContext = context;
@@ -105,23 +107,36 @@ public class DrawView extends View {
         object_position = new int[][]{{object_default_position[0][0], object_default_position[0][1]}
                 , {object_default_position[1][0], object_default_position[1][1]}
                 , {object_default_position[2][0], object_default_position[2][1]}};
-    }
+
+    }   // DrawView
 
     private void randomForImage() {
 
-        int intMyRandom;
+        int[] intNumber = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+
+        int[] intMyArrayRandom = new int[3];
+
         Random objRandom = new Random();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i=0;i<3;i++) {
 
-            //for Object & Target
-            intMyRandom = objRandom.nextInt(12) + 1;
-            object[i] = chooseImage(intMyRandom);
+            int intIndex = objRandom.nextInt(intNumber.length); // สุ่ม 1-12
 
+            while (intNumber[intIndex] == 0) {
 
-        }   //for
+                intIndex = objRandom.nextInt(intNumber.length); // สุ่ม 1-12
 
-    }   // randomForImage
+            }   // while
+
+            intMyArrayRandom[i] = intNumber[intIndex];
+            intNumber[intIndex] = 0;
+
+            object[i] = chooseImage(intMyArrayRandom[i]);
+
+        }   // for
+
+}   // randomForImage
+
 
     private int chooseImage(int intMyRandom) {
 
