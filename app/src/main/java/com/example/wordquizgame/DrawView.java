@@ -84,7 +84,6 @@ public class DrawView extends View {
         //Random for Image
         randomForImage();
 
-
         screen_width = display.getWidth();
         screen_height = display.getHeight();
         object_size = screen_width / 5;
@@ -109,6 +108,8 @@ public class DrawView extends View {
                 , {object_default_position[2][0], object_default_position[2][1]}};
 
     }   // DrawView
+
+
 
     private void randomForImage() {
 
