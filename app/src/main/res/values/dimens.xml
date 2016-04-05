@@ -6,5 +6,7 @@
     <dimen name="button1">320dp</dimen>
     <dimen name="h1">28sp</dimen>
     <dimen name="h2">25sp</dimen>
+    <dimen name="image">150dp</dimen>
+    <dimen name="h3">35sp</dimen>
 
 </resources>
