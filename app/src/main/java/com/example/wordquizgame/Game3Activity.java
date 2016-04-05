@@ -19,6 +19,8 @@ public class Game3Activity extends ActionBarActivity {
     private int[] questionImageInts;
     private String[] answerStrings, chooseStrings;
     private String showTextString = "";
+    private int timesAnInt = 0, countAnInt = 0;
+    private StringBuilder stringBuilder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +37,17 @@ public class Game3Activity extends ActionBarActivity {
         questionImageInts = myDataImage.questionImageInts;
         answerStrings = myDataImage.answerStrings;
         chooseStrings = myDataImage.chooseStrings;
-
-        //Show Question Image
-        showQuestionImage(0);
+        stringBuilder = new StringBuilder();
 
         //Clear Answer
         clearAnswer();
 
+        //Show Question Image
+        showQuestionImage(0);
+
+
         //Create Button
-        createButton(2);
+        createButton(0);
 
     }   // Main Method
 
@@ -51,10 +55,10 @@ public class Game3Activity extends ActionBarActivity {
 
         final char[] answerChars = chooseStrings[intIndex].toCharArray();
 
-
         LinearLayout.LayoutParams layoutParams = new LinearLayout
                 .LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
+
 
         for (int i = 0; i < answerChars.length; i++) {
 
@@ -72,11 +76,15 @@ public class Game3Activity extends ActionBarActivity {
 
                     button.setVisibility(View.INVISIBLE);
 
+
+                    timesAnInt += 1;
+                    if (timesAnInt >= answerChars.length) {
+                        checkAnswer();
+                    }
+
+
                 }   // onClick
             });
-
-
-
 
 
             linearLayout.addView(button);
@@ -85,18 +93,48 @@ public class Game3Activity extends ActionBarActivity {
 
     }   // createButton
 
+    private void checkAnswer() {
+
+        if (answerStrings[countAnInt].equals(textView.getText().toString())) {
+            countAnInt += 1;
+        }
+
+        clearAnswer();
+        showQuestionImage(countAnInt);
+        createButton(countAnInt);
+
+    }   // checkAnswer
+
     private void addTextToTextView(String strAdd) {
 
-        showTextString = showTextString + strAdd;
-        showTextString.trim();
+        Log.d("5April", "ค่่าที่ได้ strAdd ==> " + strAdd);
 
-        textView.setText(showTextString);
+        stringBuilder.append(strAdd);
+
+        Log.d("5April", "stringBuild ==> ที่สระสมได้ " + stringBuilder.toString());
+
+        showTextString = stringBuilder.toString();
+
+        Log.d("5April",
+                "่ค่าของ showTextString ที่รับได้ ==> " + showTextString);
+
+        forSetText(showTextString);
+
 
     }   // addText
 
+    private void forSetText(String showTextString) {
+        textView.setText(showTextString);
+    }
+
     private void clearAnswer() {
 
+        timesAnInt = 0;
         textView.setText("");
+        //showTextString = null;
+        stringBuilder.setLength(0);
+        Log.d("5April", "stringBuild ตอน Clear ==> " + stringBuilder.toString());
+        linearLayout.removeAllViews();
 
     }   // clearAnswer
 
