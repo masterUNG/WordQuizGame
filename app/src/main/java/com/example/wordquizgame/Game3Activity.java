@@ -131,7 +131,7 @@ public class Game3Activity extends ActionBarActivity {
 
         timesAnInt = 0;
         textView.setText("");
-        //showTextString = null;
+
         stringBuilder.setLength(0);
         Log.d("5April", "stringBuild ตอน Clear ==> " + stringBuilder.toString());
         linearLayout.removeAllViews();
