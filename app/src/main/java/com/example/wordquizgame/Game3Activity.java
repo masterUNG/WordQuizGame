@@ -15,6 +15,7 @@ public class Game3Activity extends ActionBarActivity {
     private TextView textView;
     private LinearLayout linearLayout;
     private int[] questionImageInts;
+    private String[] answerStrings, chooseStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,8 @@ public class Game3Activity extends ActionBarActivity {
         //Get Data
         MyDataImage myDataImage = new MyDataImage();
         questionImageInts = myDataImage.questionImageInts;
+        answerStrings = myDataImage.answerStrings;
+        chooseStrings = myDataImage.chooseStrings;
 
         //Show Question Image
         showQuestionImage(0);
@@ -37,21 +40,24 @@ public class Game3Activity extends ActionBarActivity {
         clearAnswer();
 
         //Create Button
-        createButton(4);
+        createButton(0);
 
     }   // Main Method
 
-    private void createButton(int intButton) {
+    private void createButton(int intIndex) {
+
+        char[] answerChars = chooseStrings[intIndex].toCharArray();
+
 
         LinearLayout.LayoutParams layoutParams = new LinearLayout
                 .LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        for (int i = 0; i < intButton; i++) {
+        for (int i = 0; i < answerChars.length; i++) {
 
             Button button = new Button(this);
             button.setId(i + 1);
-            button.setText(Integer.toString(i+1));
+            button.setText(String.valueOf(answerChars[i]));
 
             linearLayout.addView(button);
 

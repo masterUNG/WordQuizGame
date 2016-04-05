@@ -28,4 +28,15 @@ public class MyDataImage {
             "hand",
             "mouth"};
 
+        public String[] chooseStrings = {"atc",
+                "ogd",
+                "lpdoinh",
+                "ram",
+                "rae",
+                "yee",
+                "tofo",
+                "iarh",
+                "nadh",
+                "thmuo"};
+
 }   // Main Class
