@@ -2,6 +2,8 @@ package com.example.wordquizgame;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -34,8 +36,28 @@ public class Game3Activity extends ActionBarActivity {
         //Clear Answer
         clearAnswer();
 
+        //Create Button
+        createButton(4);
 
     }   // Main Method
+
+    private void createButton(int intButton) {
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout
+                .LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        for (int i = 0; i < intButton; i++) {
+
+            Button button = new Button(this);
+            button.setId(i + 1);
+            button.setText(Integer.toString(i+1));
+
+            linearLayout.addView(button);
+
+        }   //for
+
+    }   // createButton
 
     private void clearAnswer() {
 
