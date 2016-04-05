@@ -58,7 +58,7 @@ public class Game3Activity extends ActionBarActivity {
 
         for (int i = 0; i < answerChars.length; i++) {
 
-            Button button = new Button(this);
+            final Button button = new Button(this);
             button.setId(i);
             button.setText(String.valueOf(answerChars[i]));
 
@@ -69,6 +69,8 @@ public class Game3Activity extends ActionBarActivity {
 
                     Log.d("5April", "You Click Label = " + answerChars[view.getId()]);
                     addTextToTextView(String.valueOf(answerChars[view.getId()]));
+
+                    button.setVisibility(View.INVISIBLE);
 
                 }   // onClick
             });
