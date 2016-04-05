@@ -2,6 +2,8 @@ package com.example.wordquizgame;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -16,6 +18,7 @@ public class Game3Activity extends ActionBarActivity {
     private LinearLayout linearLayout;
     private int[] questionImageInts;
     private String[] answerStrings, chooseStrings;
+    private String showTextString = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +43,13 @@ public class Game3Activity extends ActionBarActivity {
         clearAnswer();
 
         //Create Button
-        createButton(0);
+        createButton(2);
 
     }   // Main Method
 
     private void createButton(int intIndex) {
 
-        char[] answerChars = chooseStrings[intIndex].toCharArray();
+        final char[] answerChars = chooseStrings[intIndex].toCharArray();
 
 
         LinearLayout.LayoutParams layoutParams = new LinearLayout
@@ -56,14 +59,38 @@ public class Game3Activity extends ActionBarActivity {
         for (int i = 0; i < answerChars.length; i++) {
 
             Button button = new Button(this);
-            button.setId(i + 1);
+            button.setId(i);
             button.setText(String.valueOf(answerChars[i]));
+
+            button.setLayoutParams(layoutParams);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Log.d("5April", "You Click Label = " + answerChars[view.getId()]);
+                    addTextToTextView(String.valueOf(answerChars[view.getId()]));
+
+                }   // onClick
+            });
+
+
+
+
 
             linearLayout.addView(button);
 
         }   //for
 
     }   // createButton
+
+    private void addTextToTextView(String strAdd) {
+
+        showTextString = showTextString + strAdd;
+        showTextString.trim();
+
+        textView.setText(showTextString);
+
+    }   // addText
 
     private void clearAnswer() {
 
